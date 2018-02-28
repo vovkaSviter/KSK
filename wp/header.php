@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="slider hidden-xs hidden-sm col-md-6">
-                    slider
+                    <?php echo do_shortcode('[owl-carousel category=”homeheader” items=”1″ autoPlay=”true”]')?>
                 </div>
 
             </section>

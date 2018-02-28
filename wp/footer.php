@@ -44,6 +44,12 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script>
+    $(document).ready(function(){
+        console.log('JQ is here');
 
+    });
+
+</script>
 </body>
 </html>

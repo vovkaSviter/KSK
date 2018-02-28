@@ -26,6 +26,24 @@
     .eL2
       background-image: url("assets/images/skor.jpg")
       background-position: center
+  .owl-nav
+    display: none
+  .owl-dots
+    position: relative !important
+    top: -2.25rem
+    text-align: center
+    .owl-dot
+      display: inline-block
+      width: 1rem
+      height: 1rem
+      margin-left: .25rem
+      margin-right: .25rem
+      border-radius: 50%
+      border: solid 2px $bMain
+      background: transparent
+      &.active
+        background: $bMain
+        //border: solid 2px $bContrast
   nav
     margin-top: 2rem
     .sub
