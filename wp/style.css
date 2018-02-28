@@ -7,3 +7,169 @@
  Tags:
  Text Domain:
 */
+
+body {
+    background: #ffffff;
+    color: #383838; }
+
+body {
+    margin: 0; }
+
+a {
+    text-decoration: none;
+    color: inherit; }
+
+ul {
+    list-style: none;
+    padding-left: 0; }
+
+input, textarea {
+    outline: none;
+    border: none;
+    background: transparent; }
+
+body {
+    background: #ffffff;
+    color: #383838; }
+
+@font-face {
+    font-family: RobotoThin;
+    src: url(assets/fonts/Roboto-Light.ttf); }
+@font-face {
+    font-family: RobotoReg;
+    src: url(assets/fonts/Roboto-Regular.ttf); }
+@font-face {
+    font-family: RobotoBold;
+    src: url(assets/fonts/Roboto-Bold.ttf); }
+html {
+    font-size: 16px;
+    line-height: 21px; }
+html body {
+    font-family: RobotoReg;
+    font-size: 1rem;
+    line-height: 1.27778rem; }
+html body h1 {
+    font-size: 4.22222rem;
+    line-height: 5.11111rem;
+    margin-top: 1.27778rem;
+    margin-bottom: 2.55556rem; }
+html body h2 {
+    font-size: 2.61111rem;
+    line-height: 3.83333rem;
+    margin-top: 1.27778rem;
+    margin-bottom: 1.27778rem; }
+html body h3 {
+    font-size: 1.61111rem;
+    line-height: 2.55556rem;
+    margin-top: 1.27778rem;
+    margin-bottom: 0; }
+html body h4, html body h5 {
+    font-size: 1rem;
+    line-height: 1.27778rem;
+    margin-top: 1.27778rem;
+    margin-bottom: 0; }
+html body p, html body ul, html body ol, html body pre, html body table, html body blockquote {
+    margin-top: 0;
+    margin-bottom: 1.27778rem; }
+
+.pageHeader {
+    padding-top: 1rem; }
+.pageHeader .body {
+    height: 46vh; }
+.pageHeader .body .mainLogo {
+    height: 46vh;
+    background-image: url("assets/images/logo.jpg"); }
+.pageHeader .body .extraLogo {
+    height: 23vh; }
+.pageHeader .body .eL1 {
+    background-image: url("assets/images/iku.JPG");
+    background-position: center bottom; }
+.pageHeader .body .eL2 {
+    background-image: url("assets/images/skor.jpg");
+    background-position: center; }
+.pageHeader nav {
+    margin-top: 2rem; }
+.pageHeader nav .sub {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem;
+    background: #005b82;
+    z-index: 2; }
+.pageHeader nav .sub a {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    color: #ffffff; }
+.pageHeader nav .sup > li {
+    background: linear-gradient(to bottom, #f4fafc, #dff0f7);
+    position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+.pageHeader nav .sup > li > a {
+    display: block;
+    color: #005b82;
+    text-align: center; }
+.pageHeader nav .sup > li:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
+.pageHeader nav .sup > li:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
+.pageHeader nav .sup > li:not(:last-child) {
+    border-right: solid 1px #65b6d9; }
+.pageHeader nav .sup > li:hover {
+    background: #005b82;
+    border-right: none; }
+.pageHeader nav .sup > li:hover a {
+    color: #ffffff; }
+.pageHeader nav .sup > li:hover .sub {
+    display: block; }
+.pageHeader nav .sup .socials {
+    text-align: right;
+    padding-bottom: 0.2175rem; }
+.pageHeader nav .sup .socials:hover {
+    background: linear-gradient(to bottom, #f4fafc, #dff0f7); }
+.pageHeader nav .sup .socials a {
+    display: inline-block;
+    width: 20px;
+    height: 20px; }
+.pageHeader nav .sup .socials a.vk {
+    background-image: url("assets/images/linkVK.png"); }
+.pageHeader nav .sup .socials a.ok {
+    background-image: url("assets/images/linkOK.png"); }
+.pageHeader nav .sup .socials a.fb {
+    background-image: url("assets/images/linkFB.png"); }
+
+.bgImgCover, .bgImgContain {
+    background-position: center;
+    background-repeat: no-repeat; }
+
+.bgImgCover {
+    background-size: cover; }
+
+.bgImgContain {
+    background-size: contain; }
+
+.pageFooter {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: #005b82;
+    color: #ffffff;
+    font-size: 0.75rem; }
+.pageFooter .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #3095C1; }
+.pageFooter .navigation a {
+    font-family: RobotoBold;
+    text-decoration: underline; }
+.pageFooter .navigation a.ad {
+    color: #E7953A; }
+
+/*# sourceMappingURL=style.css.map */
