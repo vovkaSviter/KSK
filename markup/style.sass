@@ -1,0 +1,117 @@
+@import "_reset.sass"
+@import "_colourscheme.sass"
+@import "_fonts.sass"
+
+// Contents
+// a. Header
+// b. General
+// c. Footer
+//
+//
+//
+
+// a. Header
+.pageHeader
+  padding-top: 1rem
+  .body
+    height: 46vh
+    .mainLogo
+      height: 46vh
+      background-image: url("assets/images/logo.jpg")
+    .extraLogo
+      height: 23vh
+    .eL1
+      background-image: url("assets/images/iku.JPG")
+      background-position: center bottom
+    .eL2
+      background-image: url("assets/images/skor.jpg")
+      background-position: center
+  nav
+    margin-top: 2rem
+    .sub
+      display: none
+      width: 100%
+      position: absolute
+      top: 100%
+      left: 0
+      padding: 1rem
+      background: $bMain
+      z-index: 2
+      a
+        display: block
+        margin-bottom: .5rem
+        font-size: .75rem
+        color: $bWhite
+    .sup
+      &>li
+        background: linear-gradient(to bottom, lighten($bMainLight, 50%), lighten($bMainLight, 45%))
+        position: relative
+        padding-top: .5rem
+        padding-bottom: .5rem
+        &>a
+          display: block
+          color: $bMain
+          text-align: center
+        &:first-child
+          border-top-left-radius: 5px
+          border-bottom-left-radius: 5px
+        &:last-child
+          border-top-right-radius: 5px
+          border-bottom-right-radius: 5px
+        &:not(:last-child)
+          border-right: solid 1px lighten($bMainLight, 15%)
+        &:hover
+          background: $bMain
+          border-right: none
+          a
+            color: $bWhite
+          .sub
+            display: block
+      .socials
+        text-align: right
+        padding-bottom: .2175rem
+        &:hover
+          background: linear-gradient(to bottom, lighten($bMainLight, 50%), lighten($bMainLight, 45%))
+        a
+          display: inline-block
+          width: 20px
+          height: 20px
+          &.vk
+            background-image: url("assets/images/linkVK.png")
+          &.ok
+            background-image: url("assets/images/linkOK.png")
+          &.fb
+            background-image: url("assets/images/linkFB.png")
+
+
+
+// b. General
+%bgDimensions
+  background-position: center
+  background-repeat: no-repeat
+.bgImgCover
+  @extend %bgDimensions
+  background-size: cover
+.bgImgContain
+  @extend %bgDimensions
+  background-size: contain
+
+// c. Footer
+.pageFooter
+  padding-top: 1rem
+  padding-bottom: 1rem
+  background: $bMain
+  color: $bWhite
+  font-size: .75rem
+  .navigation
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding-bottom: 1rem
+    margin-bottom: 1rem
+    border-bottom: solid 1px $bMainLight
+    a
+      font-family: RobotoBold
+      text-decoration: underline
+      &.ad
+        color: $bContrastLight
