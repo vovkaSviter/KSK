@@ -90,6 +90,22 @@ get_header(); ?>
                 <a href="<?php echo get_page_link(42); ?>"><?php echo get_the_title(42); ?></a>
             </h4>
 
+            <?php
+                global $post;
+                $args = array( 'posts_per_page' => 1, 'tag' => 'statya-o-shhenkah', 'orderby' => 'rand' );
+                $rand_posts = get_posts( $args );
+                foreach ( $rand_posts as $post ) :
+                    setup_postdata( $post );
+                    $post_thumbnail_id = get_post_thumbnail_id();?>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php echo wp_get_attachment_image($post_thumbnail_id); the_title(); ?>
+                    </a>
+                    <div><?php the_excerpt(); ?></div>
+                <?php endforeach;
+                wp_reset_postdata();
+            ?>
+
+
         </aside>
     </div>
 </div>
