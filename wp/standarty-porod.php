@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * Template Name: Стандарты всех пород
  */
 
 get_header(); ?>
@@ -8,17 +8,25 @@ get_header(); ?>
 <div class="row">
         <section class="contentMiddle col-xs-12 col-md-push-3 col-md-6">
             <?php
-                while ( have_posts() ) : the_post();
+                $args = array(
+                    'post_parent' => 28,
+                    'post_type' => 'page',
+                    'orderby' => 'menu_order'
+                );
 
-                    get_template_part( 'template-parts/page/content', 'page' );
-
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-
-                endwhile; // End of the loop.
+                $child_query = new WP_Query( $args );
                 ?>
+
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+                    <div <?php post_class(); ?>>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    </div>
+                <?php endwhile; ?>
+
+                <?php
+                wp_reset_postdata();
+            ?>
         </section>
 
         <aside class="contentLeft col-xs-12 col-md-3 col-md-pull-6">
