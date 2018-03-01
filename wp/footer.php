@@ -10,11 +10,11 @@
         <div class="container">
             <div class="row">
                 <div class="navigation col-xs-12 col-md-offset-3 col-md-6">
-                    <a href="#">Клуб</a>
-                    <a href="#">Новости</a>
-                    <a href="#">Выставки</a>
-                    <a href="#">Контакты</a>
-                    <a href="#" class="ad">Реклама на сайте</a>
+                    <a href="<?php echo get_page_link(16); ?>">Клуб</a>
+                    <a href="<?php echo get_page_link(50); ?>"><?php echo get_the_title(50); ?></a>
+                    <a href="<?php echo get_page_link(46); ?>"><?php echo get_the_title(46); ?></a>
+                    <a href="<?php echo get_page_link(44); ?>"><?php echo get_the_title(44); ?></a>
+                    <a href="<?php echo get_page_link(48); ?>" class="ad"><?php echo get_the_title(48); ?></a>
                 </div>
             </div>
             <div class="info row">
