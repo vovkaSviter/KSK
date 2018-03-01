@@ -52,6 +52,18 @@ get_header(); ?>
                 <a href="<?php echo get_page_link(28); ?>"><?php echo get_the_title(28); ?></a>
             </h4>
 
+            <?php
+                global $post;
+                $args = array( 'posts_per_page' => 1, 'tag' => 'statya-o-standartah', 'orderby' => 'rand' );
+                $rand_posts = get_posts( $args );
+                foreach ( $rand_posts as $post ) :
+                    setup_postdata( $post ); ?>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <div><?php the_excerpt(); ?></div>
+                <?php endforeach;
+                wp_reset_postdata();
+            ?>
+
         </aside>
         <aside class="contentRight col-xs-12 col-md-3">
 
