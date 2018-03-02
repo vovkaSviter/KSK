@@ -87,6 +87,23 @@ html body p, html body ul, html body ol, html body pre, html body table, html bo
 .pageHeader .body .eL2 {
     background-image: url("assets/images/skor.jpg");
     background-position: center; }
+.pageHeader .owl-nav {
+    display: none; }
+.pageHeader .owl-dots {
+    position: relative !important;
+    top: -2.25rem;
+    text-align: center; }
+.pageHeader .owl-dots .owl-dot {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    border-radius: 50%;
+    border: solid 2px #005b82;
+    background: transparent; }
+.pageHeader .owl-dots .owl-dot.active {
+    background: #005b82; }
 .pageHeader nav {
     margin-top: 2rem; }
 .pageHeader nav .sub {
@@ -152,6 +169,9 @@ html body p, html body ul, html body ol, html body pre, html body table, html bo
 
 .bgImgContain {
     background-size: contain; }
+
+#contactsMap .ymaps-2-1-60-inner-panes {
+    -webkit-filter: grayscale(100%); }
 
 .pageFooter {
     padding-top: 1rem;

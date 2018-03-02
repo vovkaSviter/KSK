@@ -160,6 +160,9 @@ html {
 .bgImgContain {
   background-size: contain; }
 
+#contactsMap .ymaps-2-1-60-inner-panes {
+  -webkit-filter: grayscale(100%); }
+
 .pageFooter {
   padding-top: 1rem;
   padding-bottom: 1rem;
