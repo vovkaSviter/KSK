@@ -6,20 +6,24 @@
 // a. Header
 // b. General
 // c. Footer
-//
-//
+// d. Home Page
+// e. Sidebars
 //
 
 // a. Header
 .pageHeader
   padding-top: 1rem
   .body
-    height: 46vh
+    height: 400px
     .mainLogo
-      height: 46vh
+      height: 400px
       background-image: url("assets/images/logo.jpg")
+      a
+        display: block
+        width: 100%
+        height: 100%
     .extraLogo
-      height: 23vh
+      height: 200px
     .eL1
       background-image: url("assets/images/iku.JPG")
       background-position: center bottom
@@ -28,22 +32,8 @@
       background-position: center
   .owl-nav
     display: none
-  .owl-dots
-    position: relative !important
-    top: -2.25rem
-    text-align: center
-    .owl-dot
-      display: inline-block
-      width: 1rem
-      height: 1rem
-      margin-left: .25rem
-      margin-right: .25rem
-      border-radius: 50%
-      border: solid 2px $bMain
-      background: transparent
-      &.active
-        background: $bMain
-        //border: solid 2px $bContrast
+  .owl-dot
+    outline: none
   nav
     margin-top: 2rem
     .sub
@@ -119,6 +109,7 @@
 
 // c. Footer
 .pageFooter
+  margin-top: 3rem
   padding-top: 1rem
   padding-bottom: 1rem
   background: $bMain
@@ -136,3 +127,24 @@
       text-decoration: underline
       &.ad
         color: $bContrastLight
+
+// d. Home Page
+.home, .page-template-news
+  .contentMiddle
+    li
+      margin: 1rem 1rem 3rem 1rem
+      &:not(:last-child)
+        border-bottom: solid 1px $bText
+
+// e. Sidebars
+.sideTitle
+  color: lighten($bText, 25%)
+  text-decoration: underline
+  display: block
+  margin: 1rem 0
+  img
+    display: block
+    margin: 0 auto .5rem
+.sideExcerpt
+  font-size: .85rem
+  line-height: 1rem

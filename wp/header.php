@@ -20,13 +20,15 @@
 
                     <div class="logo col-xs-12 col-md-6">
                         <div class="row">
-                            <div class="mainLogo bgImgContain col-xs-12 col-md-8 pull-left"></div>
+                            <div class="mainLogo bgImgContain col-xs-12 col-md-8 pull-left">
+                                <a href="<?php echo home_url(); ?>"></a>
+                            </div>
                             <div class="extraLogo eL1 bgImgContain hidden-xs hidden-sm col-md-4 pull-right"></div>
                             <div class="extraLogo eL2 bgImgContain hidden-xs hidden-sm col-md-4 pull-right"></div>
                         </div>
                     </div>
                     <div class="slider hidden-xs hidden-sm col-md-6">
-                        <?php echo do_shortcode('[owl-carousel category=”homeheader” items=”1″ autoPlay=”true”]')?>
+                        <?php echo do_shortcode('[slide-anything id="150"]')?>
                     </div>
 
                 </section>

@@ -9,23 +9,27 @@ get_header(); ?>
                 $child_query = new WP_Query( 'cat=12' );
                 ?>
 
+                <ul <?php post_class(); ?>>
+
                 <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
 
-                    <ul <?php post_class(); ?>>
+
                         <li class="row">
                             <a href="<?php the_permalink(); ?>" class="col-xs-12">
                                 <div class="row">
                                     <?php
                                         $bgImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
                                      ?>
-                                    <div class="imgKeeper col-xs-12 col-md-2" style="background-image: url('<?php echo $bgImg[0] ?>'); height: 100px"></div>
+                                    <div class="imgKeeper bgImgContain col-xs-12 col-md-2" style="background-image: url('<?php echo $bgImg[0] ?>'); height: 100px"></div>
                                     <h4 class="col-xs-12 col-md-10"><?php the_title(); ?></h4>
-                                    <p class="hidden-xs hidden-sm col-md-12"><?php the_excerpt(); ?></p>
+                                    <div class="hidden-xs hidden-sm col-md-10 pull-right"><?php the_excerpt(); ?></div>
                                 </div>
                             </a>
                         </li>
-                    </ul>
+
                 <?php endwhile; ?>
+
+                </ul>
 
                 <?php
                 wp_reset_postdata();
@@ -45,8 +49,8 @@ get_header(); ?>
                 $rand_posts = get_posts( $args );
                 foreach ( $rand_posts as $post ) :
                   setup_postdata( $post ); ?>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    <div><?php the_excerpt(); ?></div>
+                    <a href="<?php the_permalink(); ?>" class="sideTitle"><?php the_title(); ?></a>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata(); ?>
 
@@ -61,8 +65,8 @@ get_header(); ?>
                 $rand_posts = get_posts( $args );
                 foreach ( $rand_posts as $post ) :
                     setup_postdata( $post ); ?>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    <div><?php the_excerpt(); ?></div>
+                    <a href="<?php the_permalink(); ?>" class="sideTitle"><?php the_title(); ?></a>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata();
             ?>
@@ -81,10 +85,10 @@ get_header(); ?>
                 foreach ( $rand_posts as $post ) :
                     setup_postdata( $post );
                     $post_thumbnail_id = get_post_thumbnail_id();?>
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>" class="sideTitle">
                         <?php echo wp_get_attachment_image($post_thumbnail_id); the_title(); ?>
                     </a>
-                    <div><?php the_excerpt(); ?></div>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata();
             ?>
@@ -100,10 +104,10 @@ get_header(); ?>
                 foreach ( $rand_posts as $post ) :
                     setup_postdata( $post );
                     $post_thumbnail_id = get_post_thumbnail_id();?>
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>" class="sideTitle">
                         <?php echo wp_get_attachment_image($post_thumbnail_id); the_title(); ?>
                     </a>
-                    <div><?php the_excerpt(); ?></div>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata();
             ?>
