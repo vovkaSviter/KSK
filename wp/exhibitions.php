@@ -1,27 +1,25 @@
 <?php
+/**
+ * Template Name: Выставки
+ */
 
 get_header(); ?>
 
-    <div class="row">
+<div class="row">
         <section class="contentMiddle col-xs-12 col-md-push-3 col-md-6">
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
             <?php
 
-                $child_query = new WP_Query( 'cat=12' );
+                $child_query = new WP_Query( 'cat=13' );
                 ?>
 
                 <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
 
                     <ul <?php post_class(); ?>>
-                        <li class="row">
-                            <a href="<?php the_permalink(); ?>" class="col-xs-12">
-                                <div class="row">
-                                    <?php
-                                        $bgImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
-                                     ?>
-                                    <div class="imgKeeper col-xs-12 col-md-2" style="background-image: url('<?php echo $bgImg[0] ?>'); height: 100px"></div>
-                                    <h4 class="col-xs-12 col-md-10"><?php the_title(); ?></h4>
-                                    <p class="hidden-xs hidden-sm col-md-12"><?php the_excerpt(); ?></p>
-                                </div>
+                        <li>
+                            <a href="<?php the_permalink(); ?>">
+                                <h4 class="col-xs-12 col-md-10"><?php the_title(); ?></h4>
                             </a>
                         </li>
                     </ul>
@@ -30,11 +28,12 @@ get_header(); ?>
                 <?php
                 wp_reset_postdata();
             ?>
+
         </section>
 
         <aside class="contentLeft col-xs-12 col-md-3 col-md-pull-6">
 
-        <h4 class="firstTitle">
+            <h4 class="firstTitle">
                 <a href="<?php echo get_page_link(26); ?>"><?php echo get_the_title(26); ?></a>
             </h4>
 
@@ -70,7 +69,7 @@ get_header(); ?>
         </aside>
         <aside class="contentRight col-xs-12 col-md-3">
 
-        <h4 class="firstTitle">
+            <h4 class="firstTitle">
                 <a href="<?php echo get_page_link(18); ?>"><?php echo get_the_title(18); ?></a>
             </h4>
 
@@ -111,5 +110,10 @@ get_header(); ?>
         </aside>
     </div>
 </div>
+
+
+
+
+
 
 <?php get_footer();
