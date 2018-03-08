@@ -8,22 +8,35 @@ get_header(); ?>
 <div class="row">
         <section class="contentMiddle col-xs-12 col-md-push-3 col-md-6">
 
-            <?php
-                $args = array(
-                    'post_parent' => 18,
-                    'post_type' => 'page',
-                    'orderby' => 'menu_order'
-                );
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+            <?php
+
+                $args = array( 'tag' => 'statya-o-shhenkah');
                 $child_query = new WP_Query( $args );
                 ?>
 
+                <ul <?php post_class(); ?>>
+
                 <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
 
-                    <div <?php post_class(); ?>>
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    </div>
+
+                        <li class="row">
+                            <a href="<?php the_permalink(); ?>" class="col-xs-12">
+                                <div class="row">
+                                    <?php
+                                        $bgImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+                                     ?>
+                                    <div class="imgKeeper bgImgContain col-xs-12 col-md-2" style="background-image: url('<?php echo $bgImg[0] ?>'); height: 100px"></div>
+                                    <h4 class="col-xs-12 col-md-10"><?php the_title(); ?></h4>
+                                    <div class="hidden-xs hidden-sm col-md-10 pull-right"><?php the_excerpt(); ?></div>
+                                </div>
+                            </a>
+                        </li>
+
                 <?php endwhile; ?>
+
+                </ul>
 
                 <?php
                 wp_reset_postdata();

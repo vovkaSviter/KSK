@@ -7,6 +7,7 @@ get_header(); ?>
 
 <div class="row">
         <section class="contentMiddle col-xs-12 col-md-push-3 col-md-6">
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
             <?php
                 $args = array(
@@ -18,11 +19,13 @@ get_header(); ?>
                 $child_query = new WP_Query( $args );
                 ?>
 
-                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
-
-                    <div <?php post_class(); ?>>
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    </div>
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post();
+                    $bgImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+                ?>
+                    <a href="<?php the_permalink(); ?>" <?php post_class(); ?>>
+                        <div class="imgKeeper" style="background-image: url('<?php echo $bgImg[0] ?>');"></div>
+                        <h3><?php the_title(); ?></h3>
+                    </a>
                 <?php endwhile; ?>
 
                 <?php

@@ -1,15 +1,17 @@
 <?php
 /**
- * Template Name: Новости
+ * Template Name: Кобели на вязку
  */
 
 get_header(); ?>
 
 <div class="row">
         <section class="contentMiddle col-xs-12 col-md-push-3 col-md-6">
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
             <?php
 
-                $child_query = new WP_Query( 'cat=12' );
+                $child_query = new WP_Query( 'cat=14' );
                 ?>
 
                 <ul <?php post_class(); ?>>
@@ -37,6 +39,7 @@ get_header(); ?>
                 <?php
                 wp_reset_postdata();
             ?>
+
         </section>
 
         <aside class="contentLeft col-xs-12 col-md-3 col-md-pull-6">
@@ -45,19 +48,17 @@ get_header(); ?>
                 <a href="<?php echo get_page_link(26); ?>"><?php echo get_the_title(26); ?></a>
             </h4>
 
-
-                <?php
+            <?php
                 global $post;
                 $args = array( 'posts_per_page' => 1, 'category' => 4, 'orderby' => 'rand' );
                 $rand_posts = get_posts( $args );
                 foreach ( $rand_posts as $post ) :
-                  setup_postdata( $post ); ?>
+                    setup_postdata( $post ); ?>
                     <a href="<?php the_permalink(); ?>" class="sideTitle"><?php the_title(); ?></a>
                     <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
-                wp_reset_postdata(); ?>
-
-
+                wp_reset_postdata();
+            ?>
             <h4 class="secondTitle">
                 <a href="<?php echo get_page_link(28); ?>"><?php echo get_the_title(28); ?></a>
             </h4>
@@ -91,7 +92,7 @@ get_header(); ?>
                     <a href="<?php the_permalink(); ?>" class="sideTitle">
                         <?php echo wp_get_attachment_image($post_thumbnail_id); the_title(); ?>
                     </a>
-                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
+                    <div class="sideExcerpt"<?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata();
             ?>
@@ -115,13 +116,10 @@ get_header(); ?>
                 wp_reset_postdata();
             ?>
 
+
         </aside>
     </div>
 </div>
-
-
-
-
 
 
 <?php get_footer();

@@ -63,7 +63,8 @@ html {
       margin-bottom: 1.27778rem; }
 
 .pageHeader {
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  margin-bottom: 3rem; }
   .pageHeader .body {
     height: 400px; }
     .pageHeader .body .mainLogo {
@@ -75,6 +76,10 @@ html {
         height: 100%; }
     .pageHeader .body .extraLogo {
       height: 200px; }
+      .pageHeader .body .extraLogo a {
+        display: block;
+        width: 100%;
+        height: 100%; }
     .pageHeader .body .eL1 {
       background-image: url("assets/images/iku.JPG");
       background-position: center bottom; }
@@ -174,10 +179,15 @@ html {
       .pageFooter .navigation a.ad {
         color: #E7953A; }
 
-.home .contentMiddle li, .page-template-news .contentMiddle li {
+.home .contentMiddle li, .page-template-news .contentMiddle li, .page-template-mating-males .contentMiddle li, .page-template-mating-females .contentMiddle li, .page-template-puppies .contentMiddle li {
   margin: 1rem 1rem 3rem 1rem; }
-  .home .contentMiddle li:not(:last-child), .page-template-news .contentMiddle li:not(:last-child) {
+  .home .contentMiddle li:not(:last-child), .page-template-news .contentMiddle li:not(:last-child), .page-template-mating-males .contentMiddle li:not(:last-child), .page-template-mating-females .contentMiddle li:not(:last-child), .page-template-puppies .contentMiddle li:not(:last-child) {
     border-bottom: solid 1px #383838; }
+
+.secondTitle {
+  border-top: solid 1px black;
+  padding-top: 1.3rem;
+  margin-top: 2.6rem; }
 
 .sideTitle {
   color: #787878;
@@ -191,5 +201,25 @@ html {
 .sideExcerpt {
   font-size: 0.85rem;
   line-height: 1rem; }
+
+.post .entry-content img, .single .entry-content img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem; }
+
+.page-template-mating .hentry {
+  width: 50%;
+  float: left; }
+  .page-template-mating .hentry:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .page-template-mating .hentry .imgKeeper {
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  .page-template-mating .hentry h3 {
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

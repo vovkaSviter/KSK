@@ -23,8 +23,12 @@
                             <div class="mainLogo bgImgContain col-xs-12 col-md-8 pull-left">
                                 <a href="<?php echo home_url(); ?>"></a>
                             </div>
-                            <div class="extraLogo eL1 bgImgContain hidden-xs hidden-sm col-md-4 pull-right"></div>
-                            <div class="extraLogo eL2 bgImgContain hidden-xs hidden-sm col-md-4 pull-right"></div>
+                            <div class="extraLogo eL1 bgImgContain hidden-xs hidden-sm col-md-4 pull-right">
+                                <a href="http://ikuworld.org/"></a>
+                            </div>
+                            <div class="extraLogo eL2 bgImgContain hidden-xs hidden-sm col-md-4 pull-right">
+                                <a href="http://iku.ru/"></a>
+                            </div>
                         </div>
                     </div>
                     <div class="slider hidden-xs hidden-sm col-md-6">
