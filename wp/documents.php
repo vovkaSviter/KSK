@@ -22,7 +22,7 @@ get_header(); ?>
                         <li class="row">
                             <a href="<?php the_permalink(); ?>" class="col-xs-12">
 
-                                <h4><?php the_title(); ?></h4>
+                                <h4 class="newsTitle"><?php the_title(); ?></h4>
 
                             </a>
                         </li>

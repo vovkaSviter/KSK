@@ -23,7 +23,7 @@ get_header(); ?>
                 <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
 
                     <div <?php post_class('standarty-item'); ?>>
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <h3 class="newsTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     </div>
                 <?php endwhile; ?>
 

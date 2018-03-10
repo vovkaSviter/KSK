@@ -1,0 +1,39 @@
+// Contents
+//  a. Variables
+//  b. Home
+//  c. General
+//  d. Page Mating
+//  e.
+
+//  a. Variables
+$xs: 768px
+$sm: 992px
+$lg: 1199px
+
+//  b. Home
+.newsTitle
+  @media screen and (max-width: $sm)
+    text-align: center
+
+//  c. General
+.contentLeft, .contentRight, .contentMiddle
+  @media screen and (max-width: $sm)
+    text-align: center
+.pageFooter
+  @media screen and (max-width: $sm)
+    text-align: center
+    .navigation
+      display: block
+      &>a
+        display: block
+.entry-title
+  @media screen and (max-width: $sm)
+    font-size: 2rem
+    line-height: 3rem
+
+//  d. Page Mating
+.page-template-mating
+  .hentry
+    @media screen and (max-width: $sm)
+      width: 100%
+      float: none

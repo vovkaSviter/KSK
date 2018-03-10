@@ -6,7 +6,12 @@ get_header(); ?>
         <section class="contentMiddle col-xs-12 col-md-push-3 col-md-6">
             <?php
 
-                $child_query = new WP_Query( 'cat=12' );
+                $args = array(
+                    'posts_per_page' => 5,
+                    'cat' => 12
+                );
+//                $child_query = new WP_Query( 'cat=12' );
+                $child_query = new WP_Query( $args );
                 ?>
 
                 <ul <?php post_class(); ?>>
@@ -21,7 +26,7 @@ get_header(); ?>
                                         $bgImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
                                      ?>
                                     <div class="imgKeeper bgImgContain col-xs-12 col-md-2" style="background-image: url('<?php echo $bgImg[0] ?>'); height: 100px"></div>
-                                    <h4 class="col-xs-12 col-md-10"><?php the_title(); ?></h4>
+                                    <h4 class="col-xs-12 col-md-10 newsTitle"><?php the_title(); ?></h4>
                                     <div class="hidden-xs hidden-sm col-md-10 pull-right"><?php the_excerpt(); ?></div>
                                 </div>
                             </a>

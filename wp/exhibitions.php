@@ -19,7 +19,7 @@ get_header(); ?>
                     <ul <?php post_class(); ?>>
                         <li>
                             <a href="<?php the_permalink(); ?>">
-                                <h4 class="col-xs-12 col-md-10"><?php the_title(); ?></h4>
+                                <h4 class="col-xs-12 col-md-10 newsTitle"><?php the_title(); ?></h4>
                             </a>
                         </li>
                     </ul>

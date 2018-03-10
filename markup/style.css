@@ -191,9 +191,9 @@ html {
   .page-template-photo-exhibitions .contentMiddle li:not(:last-child), .page-template-helpTo .contentMiddle li:not(:last-child) {
     border-bottom: solid 1px #383838; }
 
-.page-template-documents .contentMiddle li {
+.page-template-documents .contentMiddle li, .page-template-exhibitions .contentMiddle li {
   margin: 0; }
-  .page-template-documents .contentMiddle li:not(:last-child) {
+  .page-template-documents .contentMiddle li:not(:last-child), .page-template-exhibitions .contentMiddle li:not(:last-child) {
     border-bottom: solid 1px #383838; }
 
 .secondTitle {
@@ -236,5 +236,31 @@ html {
 
 .standarty-item {
   border-bottom: solid 1px #383838; }
+
+@media screen and (max-width: 992px) {
+  .newsTitle {
+    text-align: center; } }
+
+@media screen and (max-width: 992px) {
+  .contentLeft, .contentRight, .contentMiddle {
+    text-align: center; } }
+
+@media screen and (max-width: 992px) {
+  .pageFooter {
+    text-align: center; }
+    .pageFooter .navigation {
+      display: block; }
+      .pageFooter .navigation > a {
+        display: block; } }
+
+@media screen and (max-width: 992px) {
+  .entry-title {
+    font-size: 2rem;
+    line-height: 3rem; } }
+
+@media screen and (max-width: 992px) {
+  .page-template-mating .hentry {
+    width: 100%;
+    float: none; } }
 
 /*# sourceMappingURL=style.css.map */
