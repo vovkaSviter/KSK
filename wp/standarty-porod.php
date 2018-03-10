@@ -7,6 +7,9 @@ get_header(); ?>
 
 <div class="row">
         <section class="contentMiddle col-xs-12 col-md-push-3 col-md-6">
+
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
             <?php
                 $args = array(
                     'post_parent' => 28,
@@ -19,7 +22,7 @@ get_header(); ?>
 
                 <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
 
-                    <div <?php post_class(); ?>>
+                    <div <?php post_class('standarty-item'); ?>>
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     </div>
                 <?php endwhile; ?>
@@ -42,8 +45,8 @@ get_header(); ?>
                 $rand_posts = get_posts( $args );
                 foreach ( $rand_posts as $post ) :
                   setup_postdata( $post ); ?>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    <div><?php the_excerpt(); ?></div>
+                    <a href="<?php the_permalink(); ?>" class="sideTitle"><?php the_title(); ?></a>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata(); ?>
 
@@ -58,8 +61,8 @@ get_header(); ?>
                 $rand_posts = get_posts( $args );
                 foreach ( $rand_posts as $post ) :
                     setup_postdata( $post ); ?>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    <div><?php the_excerpt(); ?></div>
+                    <a href="<?php the_permalink(); ?>" class="sideTitle"><?php the_title(); ?></a>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata();
             ?>
@@ -78,10 +81,10 @@ get_header(); ?>
                 foreach ( $rand_posts as $post ) :
                     setup_postdata( $post );
                     $post_thumbnail_id = get_post_thumbnail_id();?>
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>" class="sideTitle">
                         <?php echo wp_get_attachment_image($post_thumbnail_id); the_title(); ?>
                     </a>
-                    <div><?php the_excerpt(); ?></div>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata();
             ?>
@@ -97,10 +100,10 @@ get_header(); ?>
                 foreach ( $rand_posts as $post ) :
                     setup_postdata( $post );
                     $post_thumbnail_id = get_post_thumbnail_id();?>
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>" class="sideTitle">
                         <?php echo wp_get_attachment_image($post_thumbnail_id); the_title(); ?>
                     </a>
-                    <div><?php the_excerpt(); ?></div>
+                    <div class="sideExcerpt"><?php the_excerpt(); ?></div>
                 <?php endforeach;
                 wp_reset_postdata();
             ?>

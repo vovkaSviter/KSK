@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Стандарт одной породы
+ * Template Name: В помощь
  */
 
 get_header(); ?>
@@ -11,21 +11,33 @@ get_header(); ?>
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
             <?php
-                $pagename = get_query_var('pagename');
-                $args = array('tag' => $pagename);
-                $the_query = new WP_Query( $args );
 
-                if ( $the_query->have_posts() ) {
-                    echo '<ul class="posts-list">';
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
-                        echo '<li><a href="'. get_permalink() .'">' . get_the_title() . '</a></li>';
+                $child_query = new WP_Query( 'cat=4' );
+                ?>
 
-                    }
-                    echo '</ul>';
-                } else {
-                    echo 'Сорян';
-                }
+                <ul <?php post_class(); ?>>
+
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+
+                        <li class="row">
+                            <a href="<?php the_permalink(); ?>" class="col-xs-12">
+                                <div class="row">
+                                    <?php
+                                        $bgImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+                                     ?>
+                                    <div class="imgKeeper bgImgContain col-xs-12 col-md-2" style="background-image: url('<?php echo $bgImg[0] ?>'); height: 100px"></div>
+                                    <h4 class="col-xs-12 col-md-10"><?php the_title(); ?></h4>
+                                    <div class="hidden-xs hidden-sm col-md-10 pull-right"><?php the_excerpt(); ?></div>
+                                </div>
+                            </a>
+                        </li>
+
+                <?php endwhile; ?>
+
+                </ul>
+
+                <?php
                 wp_reset_postdata();
             ?>
 
@@ -108,10 +120,5 @@ get_header(); ?>
         </aside>
     </div>
 </div>
-
-
-
-
-
 
 <?php get_footer();

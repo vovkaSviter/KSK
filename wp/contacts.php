@@ -29,13 +29,13 @@ get_header(); ?>
 
                 function init(){
                     myMap = new ymaps.Map("contactsMap", {
-                        center: [44.924425, 34.129758],
+                        center: [44.923086, 34.130293],
                         zoom: 15,
                         controls: ["zoomControl"]
                     });
                     myMap.behaviors.disable('scrollZoom');
 
-                    myPlacemark = new ymaps.Placemark([44.924425, 34.129758], {
+                    myPlacemark = new ymaps.Placemark([44.923086, 34.130293], {
                         hintContent: '!',
                         balloonContent: 'г. Симферополь<br> ул. Зои Рухадзе, 27/21<br> тел. 8 (978) 895-77-37'
                     });

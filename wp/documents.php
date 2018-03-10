@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Стандарт одной породы
+ * Template Name: Документация
  */
 
 get_header(); ?>
@@ -11,21 +11,27 @@ get_header(); ?>
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
             <?php
-                $pagename = get_query_var('pagename');
-                $args = array('tag' => $pagename);
-                $the_query = new WP_Query( $args );
 
-                if ( $the_query->have_posts() ) {
-                    echo '<ul class="posts-list">';
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
-                        echo '<li><a href="'. get_permalink() .'">' . get_the_title() . '</a></li>';
+                $child_query = new WP_Query( 'cat=18' );
+                ?>
 
-                    }
-                    echo '</ul>';
-                } else {
-                    echo 'Сорян';
-                }
+                <ul <?php post_class(); ?>>
+
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+                        <li class="row">
+                            <a href="<?php the_permalink(); ?>" class="col-xs-12">
+
+                                <h4><?php the_title(); ?></h4>
+
+                            </a>
+                        </li>
+
+                <?php endwhile; ?>
+
+                </ul>
+
+                <?php
                 wp_reset_postdata();
             ?>
 
@@ -108,10 +114,5 @@ get_header(); ?>
         </aside>
     </div>
 </div>
-
-
-
-
-
 
 <?php get_footer();

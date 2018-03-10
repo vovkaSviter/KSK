@@ -10,7 +10,7 @@
 // e. Sidebars
 // f. Single Post
 // g. Page Mating
-// h.
+// h. Page Standarty
 // i.
 // j.
 
@@ -116,6 +116,12 @@
 #contactsMap .ymaps-2-1-60-inner-panes
   -webkit-filter: grayscale(100%)
 
+.posts-list
+  &>li
+    margin: 2rem 0 1rem
+    padding-bottom: 1rem
+    border-bottom: solid 1px $bText
+
 // c. Footer
 .pageFooter
   margin-top: 3rem
@@ -138,10 +144,17 @@
         color: $bContrastLight
 
 // d. Home Page
-.home, .page-template-news, .page-template-mating-males, .page-template-mating-females, .page-template-puppies
+.home, .page-template-news, .page-template-mating-males, .page-template-mating-females, .page-template-puppies,
+.page-template-photo-exhibitions, .page-template-helpTo
   .contentMiddle
     li
       margin: 1rem 1rem 3rem 1rem
+      &:not(:last-child)
+        border-bottom: solid 1px $bText
+.page-template-documents
+  .contentMiddle
+    li
+      margin: 0
       &:not(:last-child)
         border-bottom: solid 1px $bText
 
@@ -186,3 +199,7 @@
       background-position: center
     h3
       text-align: center
+
+// h. Page Standarty
+.standarty-item
+  border-bottom: solid 1px $bText

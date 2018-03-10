@@ -159,6 +159,11 @@ html {
 #contactsMap .ymaps-2-1-60-inner-panes {
   -webkit-filter: grayscale(100%); }
 
+.posts-list > li {
+  margin: 2rem 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #383838; }
+
 .pageFooter {
   margin-top: 3rem;
   padding-top: 1rem;
@@ -179,9 +184,16 @@ html {
       .pageFooter .navigation a.ad {
         color: #E7953A; }
 
-.home .contentMiddle li, .page-template-news .contentMiddle li, .page-template-mating-males .contentMiddle li, .page-template-mating-females .contentMiddle li, .page-template-puppies .contentMiddle li {
+.home .contentMiddle li, .page-template-news .contentMiddle li, .page-template-mating-males .contentMiddle li, .page-template-mating-females .contentMiddle li, .page-template-puppies .contentMiddle li,
+.page-template-photo-exhibitions .contentMiddle li, .page-template-helpTo .contentMiddle li {
   margin: 1rem 1rem 3rem 1rem; }
-  .home .contentMiddle li:not(:last-child), .page-template-news .contentMiddle li:not(:last-child), .page-template-mating-males .contentMiddle li:not(:last-child), .page-template-mating-females .contentMiddle li:not(:last-child), .page-template-puppies .contentMiddle li:not(:last-child) {
+  .home .contentMiddle li:not(:last-child), .page-template-news .contentMiddle li:not(:last-child), .page-template-mating-males .contentMiddle li:not(:last-child), .page-template-mating-females .contentMiddle li:not(:last-child), .page-template-puppies .contentMiddle li:not(:last-child),
+  .page-template-photo-exhibitions .contentMiddle li:not(:last-child), .page-template-helpTo .contentMiddle li:not(:last-child) {
+    border-bottom: solid 1px #383838; }
+
+.page-template-documents .contentMiddle li {
+  margin: 0; }
+  .page-template-documents .contentMiddle li:not(:last-child) {
     border-bottom: solid 1px #383838; }
 
 .secondTitle {
@@ -221,5 +233,8 @@ html {
     background-position: center; }
   .page-template-mating .hentry h3 {
     text-align: center; }
+
+.standarty-item {
+  border-bottom: solid 1px #383838; }
 
 /*# sourceMappingURL=style.css.map */
